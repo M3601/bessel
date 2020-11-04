@@ -31,11 +31,6 @@ var righe = [
   ),
 ];
 
-document.querySelector("#m").addEventListener("keyup", () => {
-  let m = document.querySelector("#m").value;
-  if (m != "") calcola(+m);
-});
-
 function fattoriale(n) {
   n = BigInt(n);
   let potenza = (a, b) => {
@@ -82,6 +77,45 @@ function calcola(m) {
   for (let i = 0; i < 10; i++) righe[i].innerText = J(i, m).toPrecision(10);
 }
 
+function fallbackCopyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    document.execCommand("copy");
+  } catch (err) {
+    console.error(err);
+  }
+
+  document.body.removeChild(textArea);
+}
+function copyTextToClipboard(text) {
+  if (!navigator.clipboard) {
+    fallbackCopyTextToClipboard(text);
+    return;
+  }
+  navigator.clipboard.writeText(text).then(
+    () => {},
+    (err) => {
+      console.error(err);
+    }
+  );
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   calcola(0);
+  document.querySelector("#m").addEventListener("keyup", () => {
+    let m = document.querySelector("#m").value;
+    if (m != "") calcola(+m);
+  });
+  righe.forEach((el) => {
+    el.addEventListener("click", () => {
+      copyTextToClipboard(el.innerText);
+    });
+  });
 });
