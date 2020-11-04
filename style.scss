@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Mono", monospace;
+}
+::selection {
+  background: #000000;
+  color: #ffffff;
+}
+:root {
+  font-size: 8px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.title {
+  display: flex;
+  font-weight: 700;
+  font-size: 4.35rem;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.sub {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.calcolo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  input {
+    display: flex;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 8px;
+    border-radius: calc(2.5rem + 16px);
+    appearance: none;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 10px 3px rgba($color: #000000, $alpha: 0.3);
+    transition: 0.5s ease-in-out;
+    &:focus {
+      box-shadow: 0 8px 10px 3px rgba($color: #00acc1, $alpha: 0.5);
+      transform: translateY(-4px);
+    }
+  }
+  table {
+    padding: 20px;
+    box-shadow: 0 4px 10px 3px rgba($color: #000000, $alpha: 0.3);
+    border-radius: 2rem;
+    font-size: 2.5rem;
+    width: 90%;
+    max-width: 700px;
+    * {
+      transition: 0.3s ease-in-out;
+    }
+    th,
+    td {
+      padding: 3px 0;
+      text-align: center;
+    }
+    th {
+      border-bottom: 1px solid #00acc1;
+    }
+    tbody tr:hover {
+      background: #b3e5fc;
+      filter: none;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}

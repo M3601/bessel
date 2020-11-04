@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Mono", monospace;
+}
+
+::-moz-selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+:root {
+  font-size: 8px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 10px;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  font-size: 4.35rem;
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.calcolo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.calcolo input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 8px;
+  border-radius: calc(2.5rem + 16px);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.calcolo input:focus {
+  -webkit-box-shadow: 0 8px 10px 3px rgba(0, 172, 193, 0.5);
+          box-shadow: 0 8px 10px 3px rgba(0, 172, 193, 0.5);
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.calcolo table {
+  padding: 20px;
+  -webkit-box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 2rem;
+  font-size: 2.5rem;
+  width: 90%;
+  max-width: 700px;
+}
+
+.calcolo table * {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.calcolo table th,
+.calcolo table td {
+  padding: 3px 0;
+  text-align: center;
+}
+
+.calcolo table th {
+  border-bottom: 1px solid #00acc1;
+}
+
+.calcolo table tbody tr:hover {
+  background: #b3e5fc;
+  -webkit-filter: none;
+          filter: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*# sourceMappingURL=style.css.map */
