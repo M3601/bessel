@@ -22,8 +22,8 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>\(n\)</th>
-                    <th>\(J_n \left ( m \right )\)</th>
+                    <th>`n`</th>
+                    <th>`J_{n} ( m )`</th>
                 </tr>
             </thead>
             <tbody>
@@ -71,8 +71,19 @@
             </tbody>
         </table>
     </div>
+    <div class="final">
+        <div class="desc">
+            La funzione è calcolata usando la formula ricavata dalla soluzione delle equazioni di Bessel:
+        </div>
+        `x^{2}\frac{d^{2}y}{dx^{2}}+x\frac{dy}{dx}+(x^{2}-a^{2})y=0`
+        <div class="desc">
+            Svolgendo i calcoli si ottiene che:
+        </div>
+        `J_{a}\left( x \right)=\sum_{n=0}^{\infty }\frac{\left( -1 \right)^{n}
+        \left(\frac{x}{2}\right)^{2n+a}}{n!\left(n+a\right)!}`
+    </div>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
     <script src="app.js"></script>
 </body>
 
